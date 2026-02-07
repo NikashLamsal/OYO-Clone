@@ -1,0 +1,118 @@
+{% extends 'utils/base.html' %}
+
+
+
+{% block start %}
+
+    <style>
+        :root {
+            --oyo-red: #ee2e24;
+            --oyo-red-hover: #d12920;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--oyo-red) !important;
+        }
+        
+        .btn-oyo {
+            background-color: var(--oyo-red);
+            border: none;
+            color: white;
+        }
+        
+        .btn-oyo:hover {
+            background-color: var(--oyo-red-hover);
+            color: white;
+        }
+        
+        .text-oyo {
+            color: var(--oyo-red);
+        }
+        
+        .form-control:focus {
+            border-color: var(--oyo-red);
+            box-shadow: 0 0 0 0.2rem rgba(238, 46, 36, 0.25);
+        }
+        
+        .social-btn {
+            border: 1px solid #dee2e6;
+        }
+        
+        .social-btn:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-center fw-bold mb-4">Login</h2>
+                        <p class="text-center text-muted mb-4">Sign in to your account</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="emailPhone" class="form-label">Email or Phone Number</label>
+                                <input type="text" class="form-control form-control-lg" id="emailPhone" placeholder="Enter email or phone">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter password">
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="remember">
+                                    <label class="form-check-label" for="remember">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#" class="text-decoration-none text-oyo">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-oyo btn-lg w-100 mb-3">Login</button>
+
+                            <button type="button" class="btn btn-outline-secondary btn-lg w-100 mb-3">
+                                Login with OTP
+                            </button>
+                        </form>
+
+                        <div class="d-flex align-items-center my-4">
+                            <hr class="flex-grow-1">
+                            <span class="px-3 text-muted small">OR</span>
+                            <hr class="flex-grow-1">
+                        </div>
+
+                        <button class="btn btn-light social-btn w-100 mb-2 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-google me-2"></i>
+                            Continue with Google
+                        </button>
+                        <button class="btn btn-light social-btn w-100 mb-3 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-facebook me-2"></i>
+                            Continue with Facebook
+                        </button>
+
+                        <p class="text-center mb-0 mt-4">
+                            Don't have an account? <a href="register.html" class="text-decoration-none text-oyo fw-semibold">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-center text-muted small mt-3">
+                    By continuing, you agree to our <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
